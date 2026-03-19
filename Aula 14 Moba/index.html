@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento Seleção Brasileira - HUD Pro Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="iniciarSistema()">
+
+    <div class="game-container">
+        <header>
+            <h1>🇧🇷 SELEÇÃO BRASILEIRA - MOBA & FPS TRAINING</h1>
+            <p id="status-conexao">Sincronizando periféricos...</p>
+        </header>
+
+        <main>
+            <div id="hud-display" class="display">
+                <p class="blink">>>> SISTEMA ONLINE: AGUARDANDO COMANDOS <<<</p>
+            </div>
+            
+            <div class="teclas-guia">
+                <span>HABILIDADES: Q W E R</span> | 
+                <span>ITENS: 1-7</span> | 
+                <span>LOJA: P</span> | 
+                <span>BASE: B</span>
+            </div>
+        </main>
+
+        <section class="mouse-training">
+            <h3>🎯 CAMPO DE TIRO E MIRA (FPS)</h3>
+            <div id="mouseArea" 
+                 onmousedown="atirar(event)" 
+                 oncontextmenu="event.preventDefault(); mirar()" 
+                 onwheel="trocarArma()">
+                CLIQUE ESQUERDO (ATIRAR) | DIREITO (MIRAR)
+            </div>
+            <p class="instrucao">Dica: Use o Scroll do mouse para trocar de arma.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
